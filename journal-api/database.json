@@ -19,11 +19,10 @@
   "entries": [
     {
       "id": 1,
-      "date": "01/01/2020",
       "topic": "GitHub",
+      "date": "01/01/2020",
       "note": "Add, commit and push code regularly.",
-      "moodId": "3",
-      "userId": 1
+      "moodId": 3
     },
     {
       "date": "02/02/2020",

@@ -14,6 +14,7 @@ export const EntryDetail = () => {
         getEntryById(entryId)
             .then(entry => {
                 setEntry({
+                    id: entry.id,
                     topic: entry.topic,
                     date: entry.date,
                     note: entry.note,
