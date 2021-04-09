@@ -25,3 +25,13 @@ export const deleteEntry = (id) => {
       body: JSON.stringify(editedEntry)
     }).then(data => data.json());
   } 
+
+  export const addEntry = (newEntry) => {
+    return fetch(`${remoteURL}/entries`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newEntry)
+    }).then(response => response.json())
+}

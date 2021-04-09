@@ -13,13 +13,13 @@
   ],
   "entries": [
     {
-        "id": 1,
-        "date": "01/01/2020",
-        "topic": "GitHub",
-        "note": "Add, commit and push code regularly.",
-        "mood": "Delightful",
-        "userId": 1
-      },
+      "id": 1,
+      "date": "01/01/2020",
+      "topic": "GitHub",
+      "note": "Add, commit and push code regularly.",
+      "mood": "Delightful",
+      "userId": 1
+    },
     {
       "date": "02/02/2020",
       "topic": "CSS",
@@ -35,6 +35,13 @@
       "mood": "Untroubled",
       "id": 3,
       "userId": 2
+    },
+    {
+      "topic": "React",
+      "date": "04/04/2021",
+      "note": "Props, State and Effect, oh my",
+      "mood": "delightful",
+      "id": 4
     }
   ]
 }
