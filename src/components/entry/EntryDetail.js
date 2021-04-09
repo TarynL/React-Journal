@@ -31,18 +31,18 @@ export const EntryDetail = () => {
 
     return (
 
-        <div className="card">
+        <section className="card">
             <div className="card-content">
                 <h3 className="card_topic">Topic: {entry.topic}</h3>
                 <div className="card_date">Date: {entry.date}</div>
                 <div className="card_note">Entry: {entry.note}</div>
-                <div className="card_mood">Mood: {entry.mood}</div>
+                <div className="card_mood">Mood: {entry.mood?.name}</div>
                 <button type="button"
                     onClick={() => history.push(`/entries/${entry.id}/edit`)}>
                     Edit
-        </button>
+                </button>
                 <button type="button" disabled={isLoading} onClick={handleDelete}>Delete</button>
             </div>
-        </div>
+        </section>
     )
 }

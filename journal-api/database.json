@@ -9,6 +9,11 @@
       "name": "Gus",
       "email": "gus@pugparty.edu",
       "id": 2
+    },
+    {
+      "email": "haley@cute.org",
+      "name": "Haley Louise",
+      "id": 3
     }
   ],
   "entries": [
@@ -17,14 +22,14 @@
       "date": "01/01/2020",
       "topic": "GitHub",
       "note": "Add, commit and push code regularly.",
-      "mood": "Delightful",
+      "moodId": "3",
       "userId": 1
     },
     {
       "date": "02/02/2020",
       "topic": "CSS",
       "note": "Need some more practice.",
-      "mood": "Out of Sorts",
+      "moodId": "1",
       "id": 2,
       "userId": 1
     },
@@ -32,7 +37,7 @@
       "date": "07/04/2021",
       "topic": "Flex",
       "note": "Using flex in CSS gives you so much more FLEXibilty.",
-      "mood": "Untroubled",
+      "moodId": 2,
       "id": 3,
       "userId": 2
     },
@@ -40,8 +45,37 @@
       "topic": "React",
       "date": "04/04/2021",
       "note": "Props, State and Effect, oh my",
-      "mood": "delightful",
+      "moodId": 4,
       "id": 4
+    },
+    {
+      "topic": "JavaScript",
+      "date": "04/09/2021",
+      "note": "language",
+      "moodId": 3,
+      "id": 5
+    }
+  ],
+  "moods": [
+    {
+      "id": "1",
+      "name": "Out of Sorts"
+    },
+    {
+      "id": "2",
+      "name": "Untroubled"
+    },
+    {
+      "id": "3",
+      "name": "Delighted"
+    },
+    {
+      "id": "4",
+      "name": "Hungry"
+    },
+    {
+      "id": "5",
+      "name": "Ecstatic"
     }
   ]
 }

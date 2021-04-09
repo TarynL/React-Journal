@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:5002"
 
 export const getEntryById = (entryId) => {
-  return fetch(`${remoteURL}/entries/${entryId}`)
+  return fetch(`${remoteURL}/entries/${entryId}?_expand=mood`)
   .then(res => res.json())
 }
 
@@ -34,4 +34,9 @@ export const deleteEntry = (id) => {
         },
         body: JSON.stringify(newEntry)
     }).then(response => response.json())
+}
+
+export const getMoods = () => {
+    return fetch(`${remoteURL}/moods`)
+    .then(res => res.json())
 }
