@@ -1,11 +1,11 @@
 import React, { useState, useEffect} from "react";
-import {updateEntry, getEntryId, getAllEntries, getEntryById} from "../../modules/EntryManager";
+import {updateEntry, getEntryById} from "../../modules/EntryManager";
 import "./EntryEditForm.css";
 import {useHistory, useParams} from 'react-router-dom'
 
 export const EntryEditForm = () => {
     const [entry, setEntry] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const { entryId } = useParams();
     const history = useHistory();
