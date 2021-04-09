@@ -5,6 +5,7 @@ import { EntryList} from "./entry/EntryList"
 import {EntryDetail} from "./entry/EntryDetail"
 import {EntryEditForm} from "./entry/EntryEditForm"
 
+
 export const ApplicationViews = () => {
     return (
         <>
@@ -25,6 +26,8 @@ export const ApplicationViews = () => {
             <Route path="/entries/:entryId(\d+)/edit">
                 <EntryEditForm />
             </Route>
+
+
 
         </>
     )
