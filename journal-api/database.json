@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "name": "Taryn",
+      "email": "taryn@coolchick.org",
+      "id": 1
+    },
+    {
+      "name": "Gus",
+      "email": "gus@pugparty.edu",
+      "id": 2
+    }
+  ],
+  "entries": [
+    {
+        "id": 1,
+        "date": "01/01/2020",
+        "topic": "GitHub",
+        "note": "Add, commit and push code regularly.",
+        "mood": "Delightful",
+        "userId": 1
+      },
+    {
+      "date": "02/02/2020",
+      "topic": "CSS",
+      "note": "Need some more practice.",
+      "mood": "Out of Sorts",
+      "id": 2,
+      "userId": 1
+    },
+    {
+      "date": "07/04/2021",
+      "topic": "Flex",
+      "note": "Using flex in CSS gives you so much more FLEXibilty.",
+      "mood": "Untroubled",
+      "id": 3,
+      "userId": 2
+    }
+  ]
+}

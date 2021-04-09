@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: 'Arapey', serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Arapey', serif;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: 1.5em;
+  color: #d6fcff;
+  color: darkslategray;
+}
+
+strong {
+  font-weight: bold;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
