@@ -8,7 +8,7 @@ export const EntryCard = ({entry}) => (
             <h3 className="card_topic">Topic: {entry.topic}</h3>
             <div className="card_date">Date: {entry.date}</div>
             <div className="card_note">Entry: {entry.note}</div>
-            <div className="card_mood">Mood: {entry.mood}</div>
+    
             <Link to={`/entries/${entry.id}`}>
           <button>Details</button>
         </Link>

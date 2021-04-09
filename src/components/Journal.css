@@ -35,3 +35,6 @@ address {
   margin: 0 0 1.5em;
 }
 
+NavBar {
+    border: 1px solid #ced4da;
+}

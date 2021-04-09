@@ -46,4 +46,9 @@
   .card button:hover {
     background-color: rgb(214, 148, 26);
   }
+
+  .btn-primary{
+    background-color:slategray;
+    color: #fff;
+  }
   

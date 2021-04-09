@@ -1,11 +1,22 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between
+    justify-content: space-between;
+    background-color:  #e6bf6d;
+    
 
 }
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    color:#e2e3e4;
 }
+
+.navbar_item:hover{
+    color:#3b312c
+}
+
+/* #3b312c */
+/* #82563b */
+/* #e2e3e4 */

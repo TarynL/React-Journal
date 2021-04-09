@@ -12,7 +12,7 @@ export const NavBar = ({clearUser, isAuthenticated}) => {
 
     return (
         <ul className="navbar">
-            <picture><img src={require('../images/LogoT.png')} alt="logo" /></picture>
+            <picture><img src={require('./LogoT.png')} alt="logo" /></picture>
 
             {isAuthenticated
                 ? <li className="navbar__item active">
@@ -31,7 +31,7 @@ export const NavBar = ({clearUser, isAuthenticated}) => {
                     <Link className="navbar__link" to="/login" onClick={handleLogout}>Logout </Link>
                 </li>
                 : <li className="navbar__item">
-                    <Link className="navbar__link" to="/login">Login</Link>
+                    <Link className="navbar__link logout" to="/login">Login</Link>
                 </li>}
         </ul>
     )

@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from "react";
-import {updateEntry, getEntryById} from "../../modules/EntryManager";
-import "./EntryEditForm.css";
-import {useHistory, useParams} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { updateEntry, getEntryById, getMoods } from "../../modules/EntryManager";
+import "./Entry.css";
+import { useHistory, useParams } from 'react-router-dom'
 
 export const EntryEditForm = () => {
     const [entry, setEntry] = useState({});
@@ -10,10 +10,17 @@ export const EntryEditForm = () => {
     const { entryId } = useParams();
     const history = useHistory();
 
-    const handleFieldChange = event => {
-        const stateToChange = {...entry};
+    const [moods, setMoods] = useState([]);
 
-        stateToChange[event.target.id] = event.target.value
+    const handleFieldChange = event => {
+        const stateToChange = { ...entry };
+
+        let selectedVal = event.target.value
+        if (event.target.id.includes("Id")) {
+            selectedVal = parseInt(selectedVal)
+        }
+
+        stateToChange[event.target.id] = selectedVal
         setEntry(stateToChange)
     };
 
@@ -22,24 +29,39 @@ export const EntryEditForm = () => {
         setIsLoading(true);
 
         const editedEntry = {
-            id: entryId,
+            id: entry.id,
             topic: entry.topic,
             date: entry.date,
             note: entry.note,
-            mood: entry.mood
+            moodId: entry.moodId
         };
 
-        updateEntry(editedEntry)
-        .then(() => history.push("/entires"))
+        const moodId = entry.moodId
+
+        if (moodId === 0) {
+            window.alert("Please select a mood")
+        } else {
+
+            updateEntry(editedEntry)
+                .then(() => history.push("/entries"))
+        }
     }
 
     useEffect(() => {
         getEntryById(entryId)
-        .then(entry => {
-            setEntry(entry);
-            setIsLoading(false);
-        });
+            .then(entry => {
+                setEntry(entry);
+                setIsLoading(false);
+            });
     }, []);
+
+    useEffect(() => {
+        getMoods()
+            .then(moodsFromAPI => {
+                setMoods(moodsFromAPI)
+            });
+    }, []);
+
 
     return (
         <>
@@ -76,24 +98,28 @@ export const EntryEditForm = () => {
                         />
                         <label htmlFor="note">Entry</label>
 
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
+                        <select
+                            value={entry.moodId}
+                            name="moodId" id="moodId"
                             onChange={handleFieldChange}
-                            id="mood"
-                            value={entry.mood}
-                        />
+                            className="form-control" >
+                            <option value="0">Select a Mood</option>
+                            {moods.map(m => (
+                                <option key={m.id} value={m.id}>
+                                    {m.name}
+                                </option>
+                            ))}
+                        </select>
                         <label htmlFor="mood">Mood</label>
 
 
 
-                        </div>
+                    </div>
                     <div className="alignRight">
                         <button
                             type="button" disabled={isLoading}
                             onClick={updateExistingEntry}
-                            className="btn btn-primary"
+                            className="btn btn-primary "
                         >Submit</button>
                     </div>
                 </fieldset>
